@@ -22,13 +22,15 @@ public class Movement : MonoBehaviour {
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 
 		rb.AddForce (movement * speed);
+
+		Jump ();
 	}
 
 
 	void Jump (){
 		if (Input.GetKeyDown ("space")) {
 			Vector3 playerPos = transform.position;
-			playerPos += new Vector3 (0f, 100f, 0f);
+			playerPos += new Vector3 (0f, 200f, 0f);
 			rb.AddForce (playerPos);
 		}
 	}
@@ -37,10 +39,3 @@ public class Movement : MonoBehaviour {
 
 
 
-//
-//float moveHorizontal = Input.GetAxis ("Horizontal");
-//float moveVertical = Input.GetAxis ("Vertical");
-//
-//Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-//
-//rb.AddForce (movement * speed);
