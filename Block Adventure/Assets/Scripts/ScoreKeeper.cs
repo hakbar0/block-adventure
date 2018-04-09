@@ -7,6 +7,7 @@ public class ScoreKeeper : MonoBehaviour {
 
 	private int score;
 	public Text scoreText;
+	public AudioSource pickup;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,7 @@ public class ScoreKeeper : MonoBehaviour {
 		if (other.gameObject.CompareTag ("pickup")) {
 			score++;
 			scoreText.text = "Score : " + score;
+			pickup.Play ();
 		}
 	}
 	
