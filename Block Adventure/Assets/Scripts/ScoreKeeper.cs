@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ScoreKeeper : MonoBehaviour {
 
 	private int score;
+	public Text scoreText;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +17,7 @@ public class ScoreKeeper : MonoBehaviour {
 
 		if (other.gameObject.CompareTag ("pickup")) {
 			score++;
-			print (score);
+			scoreText.text = "Score : " + score;
 		}
 	}
 	
