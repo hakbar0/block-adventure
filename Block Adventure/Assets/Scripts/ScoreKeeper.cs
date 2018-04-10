@@ -26,7 +26,7 @@ public class ScoreKeeper : MonoBehaviour {
 		}
 
 		if (other.gameObject.CompareTag ("goal")) {
-			SceneManager.LoadScene ("Level01");
+			SceneManager.LoadScene ("WinScene");
 		}
 	}
 	
